@@ -1,0 +1,41 @@
+apiversion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: 
+  name: app-role
+  namespace: webapps
+rules:
+  - apiGroups:
+        - ""
+        - appa
+        - autoscalling
+        - batch
+        - extensions
+        - policy
+        - rbac.authorization.k8s.io
+    resources:
+      - pods
+      - componentstatuses
+      - configmaps
+      - daemonsets
+      - deployments
+      - evets
+      - endpoints
+      - horizontalpodautoscalers
+      - ingress
+      - jobs
+      - limitranges
+      - namespacea
+      - nodes
+      - pods
+      - presistentvolumes
+      - presistentvolumesclaims
+      - resourcequotas
+      - replicasets
+      - replicationcontrollers
+      - serviceaccounts
+      - services 
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] 
+
+
+
+
